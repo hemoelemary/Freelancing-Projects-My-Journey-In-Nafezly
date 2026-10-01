@@ -110,7 +110,9 @@
         .offer-scroll{
             animation: scroll 7s linear infinite alternate-reverse;
         }
-        
+        #colors{
+            transition:all 2s ;
+        }
         @keyframes scroll {
             0%{
                 transform: translateX(100%);
@@ -263,8 +265,13 @@
     </footer>
     <script>
         $('#maincolor').on('click',function(){
-            $('#colors').style.visibility='visible'
-            $('#colors').style.opacity=1
+            if($('#colors').css('visibility')=='hidden'){
+                $('#colors').css('visibility','visible')
+                $('#colors').css('opacity',1)
+            }else{
+                $('#colors').css('visibility','hidden')
+                $('#colors').css('opacity',0)
+            }
         }) 
     </script>
 </body>
