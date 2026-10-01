@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Mansouri Fries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
+    <style>
+        *{
+            font-family: "Lalezar", sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(229, 154, 62);
+        }
+        li{
+            list-style: none;
+        }
+        header{
+            background-color: white;
+            
+        }
+        #crepes{
+            background-image: url('crepe.png');
+            background-position: center center;
+            height: 350px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: auto;
+            z-index: 1;
+            animation: anim 3s;
+        }
+        #textcenter{
+            text-align: center;
+            position: relative;
+            z-index: -1;
+            top:85px;
+        }
+        .order{
+            background-color:rgba(229, 154, 62,0.9);
+        }
+        .order:hover{
+            background-color: black;
+        }
+        .menu{
+            border:1px solid rgba(229, 154, 62,0.9);
+        }
+        .menu:hover{
+            background-color: black;
+            color:white
+        }
+        .c{
+            color:rgba(229, 154, 62,0.9);
+        }
+        #aboutus{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #almansouri{
+            animation: man 3s;
+            text-align: center;
+            position: relative;
+            top:80px;
+        }
+        @keyframes man {
+            0%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        @keyframes anim {
+            0%{
+                opacity: 0;
+                visibility: hidden;
+            }
+            100%{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        #contact{
+            background-color: rgba(229, 154, 62,0.9);
+        }
+        .call{
+            background-color: rgb(21, 182, 21);
+            color:white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            justify-self: center;
+        }
+        .offers{
+            background-color: rgba(229, 154, 62,0.9);
+            overflow: hidden;
+        }
+        .offer-scroll{
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="position-sticky sticky-top p-2 border-bottom">
+        <nav class="d-flex align-items-center justify-content-between">
+            <img id="icon" src="icon.png" width="100px" alt="icon">
+            <ul class="d-flex p-0 m-0 gap-2 align-items-center">
+                <li><a href="">تواصل معنا<i class="bi bi-telephone-fill mx-2"></i></a></li>
+                <li>
+                    <a href="">
+                        الرئيسية
+                        <i class="bi bi-house-door-fill mx-2"></i>
+                    </a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="offers" style="position:sticky;left:0;top:0;">
+        <div class="d-flex align-items-center  offer-scroll" >
+            <p class="d-inline-block align-self-center text-white w-100  p-0 m-0 text-center">خصومات كبيرة على المنتجات بمناسبة العام الدراسي الجديد</p>
+            <p class="d-inline-block align-self-center text-white w-100  p-0 m-0 text-center">!!سندوتش البطاطس ب 20 جنية</p>
+            <p class="d-inline-block align-self-center text-white w-100  p-0 m-0 text-center">المنصوري للكريبات</p>
+            
+        </div>
+    </div>
+    <main>
+        <section id="hero">
+            <div class="position-fixed" style="bottom:0;right:10px;font-size: 30px;z-index:99;">
+                <a href="https://wa.me/رقم حضرتك">
+                    <i class="bi bi-whatsapp" style="color:green"></i>
+                </a>
+            </div>
+            <div id="almansouri" style="font-size: clamp(1.5rem,12vw,4rem);color:rgba(229, 154, 62,0.5)" id="textcenter">
+                Al-Mansouri
+            </div>
+            <div id="crepes">
+            </div>
+            <div class="d-flex justify-content-center gap-2 align-items-center">
+                <div class="btn order rounded-pill text-white">اطلب دلوقت</div>
+                <div class="btn menu rounded-pill">المنيو</div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="fs-1 text-center c my-3">احنا مين</div>
+            <div class="d-flex justify-content-between p-2 align-items-center">
+                <div class="flex-grow-1 w-50 flex-shrink-0" style="background-image: url('crepepic.png');height: 200px;width: 200px;background-size: contain;background-repeat: no-repeat;background-position: center center;"></div>
+                <div class="flex-shrink-1 w-50" id="aboutus">
+                    المنصوري للكريبات : هدفنا ارضاء العملاء بأجود أنواع الأكلات والكريبات نقدم افضل انواع الشاورما المصري والسوري وكريبات وسندوتشات البطاطس بأفضل الأسعار 
+                </div>
+            </div>
+        </section>
+        <section id="menu">
+            <div class="fs-1 text-center c my-3">المنيو</div>
+            <div class="d-flex flex-wrap justify-content-around align-items-center gap-2">
+                <div class="card rounded-pill p-2" style="overflow:hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDIO4QPY7ROots4996bRLRW2D3KSMubqIndd93_YgbtQ&s=10" height="200px" class="card-img-top" alt="">
+                    <div class="card-body mx-auto">
+                        <div class="card-title">كريب بطاطس سوري</div>
+                        <div class="card-text">
+                            <div class="fs-4 text-center">
+                                50EGP
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="btn order text-white rounded-pill">طلب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-pill p-2" style="overflow: hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeU2PXF13MCGO4nCr3jHrlKL-ZfuFiBcOsMANc1KxRNg&s=10" height="200px" class="card-img-top" alt="">
+                    <div class="card-body mx-auto">
+                        <div class="card-title">كريب شاورما مصري</div>
+                        <div class="card-text">
+                            <div class="fs-4 text-center">
+                                70EGP
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="btn order text-white rounded-pill">طلب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-pill p-2" style="overflow: hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwgXIqQOH5aIscjO_-1bBDPP94I6bnLIhHj-NrvAaWQ&s=10" height="200px" class="card-img-top" alt="">
+                    <div class="card-body mx-auto">
+                        <div class="card-title">كريب شاورما دجاج</div>
+                        <div class="card-text">
+                            <div class="fs-4 text-center">
+                                50EGP
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="btn order text-white rounded-pill">طلب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-pill p-2" style="overflow: hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQIJH5gCtAO8wCgonyikICQ5Uz1Iz9drk6joFbKG-pEA&s=10" height="200px" width="200px"  alt="">
+                    <div class="card-body mx-auto">
+                        <div class="card-title">سندوتش بطاطس سوري</div>
+                        <div class="card-text">
+                            <div class="fs-4 text-center">
+                                20EGP
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="btn order text-white rounded-pill">طلب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="p-2 my-3">
+            <h2 class="text-white text-center">تواصل معنا</h2>
+            <p class="text-center text-white">
+                تواصل معنا على الرقم التالي
+            </p>
+                <a href="https://wa.me/+20" class="d-flex justify-content-center">
+                    <i class="bi bi-whatsapp" style="color:green;font-size: 30px;"></i>
+                </a>
+        </section>
+    </main>
+    <footer class="d-flex justify-content-center align-items-center">
+        <a href="">
+            <p class="m-0">المنصوري للكريبات</p>
+        </a>
+        <img src="icon.png" width="100px" >
+        <a href="https://wa.me/+201021192946">
+            <p class="m-0">HamodaElemary</p>
+        </a>
+    </footer>
+</body>
+</html>
