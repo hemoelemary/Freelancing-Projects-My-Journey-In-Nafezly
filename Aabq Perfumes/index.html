@@ -109,6 +109,24 @@
         border-color: white;
 
        }
+       ::selection{
+        color:#D48C9E
+       }
+       #tests{
+        animation: scrollx 20s linear infinite;
+        animation-delay: 0s;
+       }
+       #tests:hover{
+        animation-play-state: paused;
+       }
+       @keyframes scrollx{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+       }
        @keyframes op {
         0%{
             opacity: 0;
@@ -127,18 +145,25 @@
             transform:translateX(0%) ;
         }
        }
+       @media(max-width:670px){
+        
+       }
     </style>
 </head>
 <body class="bg-bod ">
     <header class="sticky-top p-2 border border-1 bg-light">
         <nav class="d-flex justify-content-between align-items-center ">
-            <h3 class="main-font archivo deco" id="ico">abq</h3>
+            <h3 class="main-font deco" id="ico">abq</h3>
             <ul class="d-flex justify-content-between gap-4 align-items-center m-0">
                 <li>
-                    <i class="bi bi-patch-question fs-3"></i>
+                    <a href="#about">
+                        <i class="bi bi-patch-question fs-3"></i>
+                    </a>
                 </li>
                 <li>
-                    <i class="bi bi-bag fs-3 "></i>
+                    <a href="#menu">
+                        <i class="bi bi-bag fs-3 "></i>
+                    </a>
                 </li>
                 <li>
                     <i class="bi bi-heart fs-3"></i>
@@ -147,6 +172,9 @@
         </nav>
     </header>
     <main>
+        <div id="back" class="btn position-fixed border bottom-0 back rounded-circle text-white" style="right: 0;background-color: #D48C9E;">
+            <i class="bi bi-arrow-up text-white"></i>
+        </div>
         <section id="hero">
             <div class="w-100 h-100 d-flex flex-column flex-sm-row gap-5">
                 <div id="perfumehero"  style="background-image: url(perfume.png);background-position: center center;background-size: cover;background-repeat: no-repeat;" id="img" class="w-50" ></div>
@@ -166,8 +194,8 @@
             </div>
         </section>
         <section class="mt-4 container">
-            <div name="0" class="d-flex flex-column flex-md-row justify-content-center justify-content-md-around align-items-center gap-4">
-                <div class="position-relative shadow-lg perfumebg" style="max-width: 444px;width:100%;height: 360px;background-image: url('perfumebg1.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;">
+            <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-around align-items-center gap-4">
+                <div  name="0" class="position-relative shadow-lg perfumebg" style="max-width: 444px;width:100%;height: 360px;background-image: url('perfumebg1.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;">
                     <div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center position-absolute" style="right: 60px;">
                         <h2 class="rakkas">أفضل أنواع العطور</h2>
                         <p class="rakkas">استمتع بأفضل التركيبات العطرية</p>
@@ -251,23 +279,177 @@
             <h1 class="rakkas text-center btns" >المنتجات</h1>
             <h3 class="zain text-center">أفضل العطور</h3>
             <p class="text-secondary zain text-center">المقدمة من عبق خصيصا</p>
-            <div id="menu" class="container d-flex justify-content-center align-items-center">
-                <div class="card">
-                    
+            <div id="menu" class="container d-flex flex-column flex-wrap gap-4 flex-sm-row justify-content-around align-items-center">
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod1.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5 class="text-secondary text-center">Le Perfume</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
                 </div>
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod2.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        
+                    </div>
+                    <h5 class="text-secondary text-center">Le Perfume E2</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
+                </div>
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod3.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+
+                    </div>
+                    <h5 class="text-secondary text-center">Harrel</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
+                </div>
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod4.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5 class="text-secondary text-center">Love</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
+                </div>
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod5.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5 class="text-secondary text-center">Bomen</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
+                </div>
+                <div class="card d-flex flex-column justify-content-between gap-2 p-2" id="prod1" style="width: 200px;">
+                    <div id="bg" class="border border-2 border-dark" style="background-image: url('products/prod6.jpg');background-size: cover;background-position: center center;background-repeat: no-repeat;min-height: 200px;width: 100%;max-width: 300px;"></div>
+                    <div id="stars" class="mx-auto">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5 class="text-secondary text-center">Gold Perfume</h5>
+                    <div class="btn btn-outline-dark text-center text-secondary">EGP</div>
+                </div>
+            </div>
+            <div class="btn btn-dark d-flex justify-content-center align-items-center my-3 mx-auto w-25">Load More</div>
+        </section>
+                <section id="testimonial" class="mt-5 container">
+            <h1 class="rakkas text-center btns">التقييمات</h1>
+            <!-- التمرير الأفقي مع منع انضغاط الكروت -->
+            <div id="tests" class="d-flex flex-row flex-nowrap gap-4 mt-4 px-2 py-3" style="overflow-x: auto; scroll-snap-type: x mandatory;">
+                
+                <div class="card flex-shrink-0 border-0" style="width: 280px; scroll-snap-align: center;">
+                    <div class="card-body shadow-lg d-flex justify-content-between flex-column gap-2 rounded h-100">
+                        <i class="bi bi-person-circle text-center fs-1"></i>
+                        <div class="card-title text-center fw-bolder">احمد محمود</div>
+                        <div class="card-text text-secondary text-center fw-bolder">عبق دايما بيقدموا افضل انواع العطور والريحة بتدوم ٤٨ ساعة</div>
+                        <div class="stars mx-auto">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card flex-shrink-0 border-0" style="width: 280px; scroll-snap-align: center;">
+                    <div class="card-body shadow-lg d-flex flex-column gap-2 justify-content-between rounded h-100">
+                        <i class="bi bi-person-circle text-center fs-1"></i>
+                        <div class="card-title text-center fw-bolder">مالك محمد</div>
+                        <div class="card-text text-secondary text-center fw-bolder">عبق افضل براند عطور اتعاملت معاه ناس محترمين جدا</div>
+                        <div class="stars mx-auto">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card flex-shrink-0 border-0" style="width: 280px; scroll-snap-align: center;">
+                    <div class="card-body shadow-lg d-flex flex-column justify-content-between gap-2 rounded h-100">
+                        <i class="bi bi-person-circle text-center fs-1"></i>
+                        <div class="card-title text-center fw-bolder">ادهم ايهاب</div>
+                        <div class="card-text text-secondary text-center fw-bolder">احسن ناس اتعاملت معاهم بصراحة واسعارهم كويسة</div>
+                        <div class="stars mx-auto">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="mt-5 p-3" style="background-color: #D48C9E;">
+            <h3 class="text-center deco text-white">ABQ</h3>
+            <h3 class="mt-3 text-white text-center rakkas">Mohamed Elemary</h3>
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <a href="" class="text-white text-decoration-none"><i class="bi text-white bi-facebook"></i></a>
+                <a href="" class="text-white text-decoration-none"><i class="bi text-white bi-whatsapp"></i></a>
+            </div>
+        </footer>
 <script>
-$('.borderabs').on('mousenter',function (){
-    const name = $(this).attr('name')
-    $(`.perfumebg[name="${Number(name)}"]`).toggleClass('scale')
+$('.borderabs').on('mouseenter',function (){
+    let name = $(this).attr('name')
+    $(`.perfumebg[name=${name}]`).toggleClass('scale')
 }).on('mouseleave',function(){
-    $(`.perfumebg[name="${Number(name)}"]`).toggleClass('scale')
+    let name = $(this).attr('name')
+    $(`.perfumebg[name=${name}]`).toggleClass('scale')
     
     
 })
+
+$('button:contains("استكشف")').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $('#category').offset().top - 80
+    }, 700);
+});
+
+$(window).scroll(function(){
+    if($(this).scrollTop()>300){
+        $('#back').fadeIn()
+    }else{
+        $('#back').fadeOut()
+    }
+})
+
+$(document).on('click','#back',function(){
+    $('html,body').animate({
+        scrollTop:$('body').offset().top
+    },700)
+})
+
 </script>
 </body>
 </html>
